@@ -1,5 +1,5 @@
-view: zozo_table_20190507 {
-  sql_table_name: demo_db.zozo_table_20190507 ;;
+view: zozo_table_20190509 {
+  sql_table_name: demo_db.zozo_table_20190509 ;;
 
   dimension: users_count {
     type: number
@@ -33,10 +33,6 @@ view: zozo_table_20190507 {
 
   measure: count {
     type: count
-<<<<<<< HEAD
-    drill_fields: [users_last_name, users_first_name]
-=======
     drill_fields: [users_first_name, users_last_name]
->>>>>>> branch 'dev-mandy-chan-bjs7' of https://github.com/mandy-chan/Mandys-Looker.git
   }
 }

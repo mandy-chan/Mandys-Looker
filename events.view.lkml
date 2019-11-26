@@ -39,6 +39,10 @@ view: events {
 
   measure: count {
     type: count
+<<<<<<< HEAD
     drill_fields: [id, users.first_name, users.id, users.last_name]
+=======
+    drill_fields: [id, users.id, users.first_name, users.last_name]
+>>>>>>> branch 'dev-mandy-chan-bjs7' of https://github.com/mandy-chan/Mandys-Looker.git
   }
 }

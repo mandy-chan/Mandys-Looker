@@ -46,8 +46,24 @@ view: inventory_items {
     sql: ${TABLE}.sold_at ;;
   }
 
+<<<<<<< HEAD
   measure: count {
     type: count
     drill_fields: [id, products.item_name, products.id, order_items.count]
+=======
+  dimension_group: created_sold {
+    type:  duration
+    sql_start: ${created_raw} ;;
+    sql_end: ${sold_raw} ;;
+  }
+  measure: count {
+    type: count
+    drill_fields: [id, products.id, products.item_name, order_items.count]
+  }
+
+  measure: most_recent_created_item {
+    type:  date
+    sql: MAX(${created_raw}) ;;
+>>>>>>> branch 'dev-mandy-chan-bjs7' of https://github.com/mandy-chan/Mandys-Looker.git
   }
 }
